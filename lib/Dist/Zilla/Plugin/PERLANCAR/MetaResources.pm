@@ -1,4 +1,4 @@
-package Dist::Zilla::Plugin::Author::PERLANCAR::MetaResources;
+package Dist::Zilla::Plugin::PERLANCAR::MetaResources;
 
 # DATE
 # VERSION
@@ -167,7 +167,7 @@ __PACKAGE__->meta->make_immutable;
 
 In dist.ini:
 
- [Author::PERLANCAR::MetaResources]
+ [PERLANCAR::MetaResources]
 
 
 =head1 DESCRIPTION
