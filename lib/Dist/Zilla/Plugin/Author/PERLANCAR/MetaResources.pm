@@ -1,10 +1,11 @@
-package Dist::Zilla::Plugin::Author::SHARYANTO::MetaResources;
+package Dist::Zilla::Plugin::Author::PERLANCAR::MetaResources;
+
+# DATE
+# VERSION
 
 use 5.010001;
 use strict;
 use warnings;
-
-# VERSION
 
 use Moose;
 #use experimental 'smartmatch';
@@ -158,7 +159,7 @@ no Moose;
 __PACKAGE__->meta->make_immutable;
 
 1;
-# ABSTRACT: Set meta resources for SHARYANTO dists
+# ABSTRACT: Set meta resources for dists
 
 =for Pod::Coverage .+
 
@@ -166,7 +167,7 @@ __PACKAGE__->meta->make_immutable;
 
 In dist.ini:
 
- [Author::SHARYANTO::MetaResources]
+ [Author::PERLANCAR::MetaResources]
 
 
 =head1 DESCRIPTION
@@ -178,6 +179,6 @@ page instead of github wiki.
 
 =head1 SEE ALSO
 
-L<Dist::Zilla::PluginBundle::Author::SHARYANTO>
+L<Dist::Zilla::PluginBundle::Author::PERLANCAR>
 
 =cut
