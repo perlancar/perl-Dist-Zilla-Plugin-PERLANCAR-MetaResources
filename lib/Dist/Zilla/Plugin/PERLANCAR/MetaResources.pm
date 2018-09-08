@@ -97,7 +97,7 @@ sub _build__github {
         unless $url and length $url;
 
     die "GitHubMeta: no github host found in URL '$url'\n"
-        unless $url =~ m!:(//)?github\.com!i;
+        unless $url =~ m!(:(//)?|\@)github\.com!i;
 
     my ($account, $project) = ($url =~ m{[:/](.+)/(.+)\.git$});
 
