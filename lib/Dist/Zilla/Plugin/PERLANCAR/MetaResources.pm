@@ -96,11 +96,14 @@ sub _build__github {
     die "GitHubMeta: no url found for remote '$remote'\n"
         unless $url and length $url;
 
+    die "GitHubMeta: no github host found in URL '$url'\n"
+        unless $url =~ m!:(//)?github\.com!i;
+
     my ($account, $project) = ($url =~ m{[:/](.+)/(.+)\.git$});
 
-    die "GitHubMeta: no github account name found in .git/config\n"
+    die "GitHubMeta: no github account name found in URL '$url'\n"
         unless $account and length $account;
-    die "GitHubMeta: no github repository (project) found in .git/config\n"
+    die "GitHubMeta: no github repository (project) found in URL '$url'\n"
         unless $project and length $project;
 
     return { account => $account, project => $project };
