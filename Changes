@@ -1,3 +1,8 @@
+0.041   2020-10-27  Released-By: PERLANCAR; Urgency: medium
+
+	- Fix regex to extract github username and repo name.
+
+
 0.040   2018-09-08  Released-By: PERLANCAR
 
 	- [bugfix] Fix checking of GitHub URL in .git/config.
