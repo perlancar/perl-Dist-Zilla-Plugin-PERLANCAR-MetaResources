@@ -99,13 +99,14 @@ sub _build__github {
     die "GitHubMeta: no github host found in URL '$url'\n"
         unless $url =~ m!(:(//)?|\@)github\.com!i;
 
-    my ($account, $project) = ($url =~ m{[:/](.+)/(.+)\.git$});
+    my ($account, $project) = ($url =~ m{[:/]([^/]+)/([^/]+?)(?:\.git)?$});
 
     die "GitHubMeta: no github account name found in URL '$url'\n"
         unless $account and length $account;
     die "GitHubMeta: no github repository (project) found in URL '$url'\n"
         unless $project and length $project;
 
+    $self->log_debug("github account: $account, github project: $project");
     return { account => $account, project => $project };
 }
 
