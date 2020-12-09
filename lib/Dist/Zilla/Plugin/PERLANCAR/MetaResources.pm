@@ -1,6 +1,8 @@
 package Dist::Zilla::Plugin::PERLANCAR::MetaResources;
 
+# AUTHORITY
 # DATE
+# DIST
 # VERSION
 
 use 5.010001;
@@ -55,7 +57,9 @@ has homepage => (
 has bugtracker_web => (
     is      => 'ro',
     isa     => 'Str',
-    default => 'https://rt.cpan.org/Public/Dist/Display.html?Name=%N',
+    # old, will be dead in mar 2021
+    # default => 'https://rt.cpan.org/Public/Dist/Display.html?Name=%N',
+    default => 'https://github.com/%a/%r/issues',
 );
 
 has repository_url => (
